@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Parcel
+.parcel-cache/
+dist/
+
+# Environment / secrets (keep .env.example tracked)
+.env
+.env.*
+!.env.example
+
+# Netlify
+.netlify/
+
+# Supabase CLI local state
+supabase/.temp/
+supabase/.branches/
+supabase/.env
+supabase/functions/.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Test / coverage output
+coverage/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
