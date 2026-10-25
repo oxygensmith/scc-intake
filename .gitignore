@@ -36,3 +36,14 @@ Thumbs.db
 !.vscode/extensions.json
 .idea/
 *.swp
+
+# Safety net: no real applicant data in the repo, ever
+private/
+uploads/
+*.csv
+*.xlsx
+*.xls
+*.heic
+*.dump
+*.sql.gz
+supabase/seed.real*.sql

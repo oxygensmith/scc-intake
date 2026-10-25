@@ -29,16 +29,6 @@ Out of scope for v1: automating entry into Engage (see below).
 - **Backend:** **Supabase**: Postgres, Auth (magic link, no passwords), Storage (private bucket), RLS.
 - **Optional:** Netlify Functions only if a secret must be kept server-side. The Supabase `service_role` key never goes in front-end code.
 
-Starting point: Rob has other Netlify-hosted projects (Hugo, Parcel) that can be copied as scaffolding. Ask which one before choosing a build tool; don't assume.
-
-## Coding conventions (Rob's standing rules)
-
-- **ES6 JavaScript.** No jQuery. No "vanilla"-style legacy patterns.
-- **SCSS** for all CSS.
-- **Never inline.** No `<style>` or `<script>` bodies in HTML. JS and CSS live in separate files.
-- Comments: add them at first output. On later iterations, drop `//` comments unless new or changed. Comments written as `/* like this */` are **protected**. Never remove them.
-- Response mode: BRIEF by default. VERBOSE and CODE are switched on by Rob with those words.
-
 ## Data model (draft; refine with Rob)
 
 `applicants`
@@ -107,13 +97,3 @@ The coordinator role turns over. Everything must survive that:
 - Keep the stack boring and documented.
 - Rob writes SOPs in the Moonjoule Notion ("SOPs + Best Practices"). Produce a short operations SOP at the end: how to add a coordinator, rotate keys, restore from backup, and what the delete job does.
 - No real applicant data in the repo, ever. `.env` files are gitignored; supply an `.env.example`.
-
-## Open questions for Rob
-
-- Which Squarespace plan, exactly? (Assumed Basic; confirm in account settings.)
-- Where is the domain registered, and who controls DNS for `saskatooncarshare.com`?
-- How many board members/volunteers need to log in?
-- Exact onboarding checklist, and what the "abstract" and "attestation" are in practice.
-- Does Engage have an import or API? (Ask Ed/Engage support; not blocking.)
-- Privacy duties that apply to the co-op (retention, breach handling). Board to confirm.
-- Netlify and Supabase free-tier limits vs. expected volume. Verify current numbers; don't trust this doc.
